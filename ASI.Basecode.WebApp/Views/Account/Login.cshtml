@@ -2,6 +2,7 @@
 @using static ASI.Basecode.Resources.Views.Screen
 @section styles {
     <link rel="stylesheet" href="~/css/login.css" />
+
 }
 @{
     ViewBag.LoginView = true;
@@ -10,24 +11,28 @@
 <div>
     @Html.AntiForgeryToken()
 </div>
-<div class="loginContainer pt-4">
+<div class="loginContainer p-5">
     <section class="d-flex">
         @* First Column Description *@
-        <section class="col-6 p-2">
-            <section class="d-flex d-flex align-items-center">
-                <h1 class="fw-bold pt-5">Welcome</h1>
+        <section class="col-7 p-2">
+            <section class="row">
+                <h1 class="fw-bold pt-5 d-flex justify-content-start">Welcome</h1>
+                <section class="d-flex pt-3">
+                    <p class="pe-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </section>
             </section>
-            <section class="d-flex pt-3">
-                <p class="w-75">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </section>
+           
         </section>
         @* login Section Column *@
         <section class="loginCol col">
             <section class="container p-4">
-                <section class="row d-flex justify-content-end">
-                    <img width="140" height="140" class="img-fluid" src="~/img/Uni-Think-Logo.svg" alt=""/>
+                <section class="row">
+                    <section class="col-5"></section>
+                    <section class="col">
+                        <img class="me-0" width="150" height="150" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
+                    </section>
                 </section>
-                <section class="p-3 row d-flex justify-content-start">
+                <section class="row d-flex justify-content-start">
                     <h2 class="fw-normal">Login</h2>
                 </section>
                 @* login form *@
@@ -45,16 +50,16 @@
                 </section>
                 @* forgot password *@
                 <section class="d-flex justify-content-end">
-                    <a class="text-muted" asp-controller="Account" asp-controller="ForgotPassword">@ForgotPass</a>
+                    <a class="text-muted text-decoration-none" asp-controller="Account" asp-action="ForgotAccount">@ForgotPass</a>
                 </section>
                 @* Login button *@
                 <section class="text-center pt-5">
-                    <button class="p-2 w-100 btn btn-primary mb-3 btnLogin" type="submit">@Login</button>
+                        <button class="p-2 w-100 btn mb-3 btnLogin text-white" type="submit" style="background: #1E7110 !important;">@Login</button>
                 </section>
                  @* create new account*@
                 <section class="text-center pt-3 pb-3">
                     <p class="mb-0 me-2 mr-1" hidden>@DontHaveAcc</p>
-                    <button asp-controller="Account" asp-action="Register" class="createNewBtn p-2 w-100 btn btn-primary mb-3 btnLogin" type="submit">@CreateNew</button>
+                        <button asp-controller="Account" asp-action="Register" class="createNewBtn p-2 w-100 btn mb-3" type="submit" style="background:#97FE86 !important;">@CreateNew</button>
                 </section>
                 </form>
             </section>

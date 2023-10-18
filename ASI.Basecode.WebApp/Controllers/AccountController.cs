@@ -1,9 +1,9 @@
 ﻿using ASI.Basecode.Data.Models;
+using ASI.Basecode.WebApp.Models;
 using ASI.Basecode.Services.Interfaces;
 using ASI.Basecode.Services.Manager;
 using ASI.Basecode.Services.ServiceModels;
 using ASI.Basecode.WebApp.Authentication;
-using ASI.Basecode.WebApp.Models;
 using ASI.Basecode.WebApp.Mvc;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -138,5 +138,27 @@ namespace ASI.Basecode.WebApp.Controllers
             await this._signInManager.SignOutAsync();
             return RedirectToAction("Login", "Account");
         }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotAccount(ForgotAccountViewModel model)
+        {
+            return View();
+        }
+        /* account verification area */
+        [HttpPost]
+        public IActionResult AccountVerification(AccountVerificationViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Perform any account verification logic here
+                return View("AccountVerification");
+            }
+            else
+            {
+                // Display the form with validation errors
+                return View();  
+            }
+        }
+
     }
 }
