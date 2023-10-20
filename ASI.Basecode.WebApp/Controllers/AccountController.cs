@@ -148,17 +148,23 @@ namespace ASI.Basecode.WebApp.Controllers
         [HttpPost]
         public IActionResult AccountVerification(AccountVerificationViewModel model)
         {
-            if (ModelState.IsValid)
+            return View("AccountVerification");
+/*            if (ModelState.IsValid)
             {
                 // Perform any account verification logic here
-                return View("AccountVerification");
+                
             }
             else
             {
                 // Display the form with validation errors
                 return View();  
-            }
+            }*/
         }
 
+        [HttpPost]
+        public IActionResult ResetPassword(ResetPasswordViewModel model) 
+        {
+            return View(model);
+        }
     }
 }
