@@ -5,31 +5,29 @@
 @{
     ViewData["Title"] = "Account Verifcation Page";
 }
-<p>test</p>
-@* 
-    <div class="ForgotAccountContainer p-5">
+<div class="AccountVerification p-5" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
     <section class="d-flex p-5">
-        <section class="SubContainer container ps-5 pe-5 pb-5 border" style="background: #F5F5F5;">
+        <section class="container ps-5 pe-5 pb-3 border" style="background: #F5F5F5;">
             <section class="row">
                 <section class="col-5"></section>
                 <section class="col">
                     <img class="me-0" width="150" height="150" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
                 </section>
                 <section class="row">
-                    <h5 class="d-flex justify-content-start">Forgot your account?</h5>
+                    <h3 class="d-flex justify-content-center">Account Verification</h3>
                 </section>
                 <section class="row pt-5">
-                    <h5 class="d-flex justify-content-start fw-normal">Please enter your email or mobile number.</h5>
+                    <h5 class="d-flex justify-content-start fw-normal">We’re sending a verification code to you phone or email address. Enter it below to reset your password.</h5>
                 </section>
-                <form method="get" action="/Account/AccountVerification">
+                <form action="/Account/ResetPassword" method="post">
                     <section class="row pt-3 pb-4">
-                        <input type="text" class="border p-3" placeholder="Email or mobile number:" />
+                        <input class="border p-3"type="text" id="verificationCode" placeholder="Verification code:"/>
                     </section>
                     <section class="row pt-5 d-flex justify-content-end">
-                        <input class="btn btn-success w-25 p-2" type="submit" id="submit" value="Get code" style="background: #1E7110" />
+                        <input class="btn btn-success w-25 p-2" type="submit" id="submit" value="Submit" style="background: #1E7110" />
                     </section>
                 </form>
             </section>
         </section>
     </section>
-</div> *@
+</div>
