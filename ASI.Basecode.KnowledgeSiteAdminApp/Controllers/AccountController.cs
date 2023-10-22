@@ -166,10 +166,5 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         {
             return View(model);
         }
-        [HttpPost]
-        public IActionResult AdminScreenDashboard()
-        {
-            return View();
-        }
     }
 }
