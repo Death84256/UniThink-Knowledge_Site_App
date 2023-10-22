@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);
+}
+.loginCol{
+    border-radius: 10px;
+    background: #F5F5F5;
+    box-shadow: 47px 45px 4px 81px rgba(0, 0, 0, 0.00);
+}
+button .btnLogin{
+    background: #1E7110 !important;
+}
+.createNewBtn{
+    color: #000;
+    background: #97FE86 !important;
+}
