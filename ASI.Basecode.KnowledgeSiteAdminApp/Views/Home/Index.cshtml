@@ -1,13 +1,62 @@
 ﻿@{
     ViewData["Title"] = "Admin Screen Dashboard";
 }
-<div class="container"> 
+<div>
     <section style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
-        <section class="row">
-            <section class="col">
-                
+       <section class="container">
+           @* First Row *@
+            <section class="row d-flex">
+                <section class="col d-flex">
+                    <section class=" d-flex justfiy-content-start align-items-center">
+                        <img class="me-0" width="150" height="150" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
+                    </section>
+                </section>
+                <section class="col d-flex justify-content-end">
+                    <section class="d-flex justify-content-end align-items-center">
+                        <img class="me-0" width="60" height="60" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
+                    </section>
+                </section>
             </section>
-            <section class="col"></section>
+            @* Dashboard Body Content *@
+            <section class="container bg-white p-4 d-flex">
+                @* First Column / User Master*@
+                <section class="col-5">
+                    <a href="#" style="text-decoration:none;color:#000;">
+                        <section class="border pt-5" style="border-radius: 30px;background: #FF405E;">
+                            <section class="row pt-5"style="border-radius:10px;">
+                                <section class="bg-white">
+                                    <h1 class="fw-normal text-center">
+                                        User Master
+                                    </h1>
+                                </section>
+                            </section>
+                            @* image *@
+                            <section class="pt-5">
+                                <img width="190" height="220" class="pe-2 me-0" src="~/img/brainImg.svg" alt="" style="margin-left: auto; display: block;" />
+                            </section>
+                        </section>
+                    </a>
+                </section>
+                @* Second Column / Training Category and Training  *@
+                <section class="col">
+                    <a href="#">
+                    @* Training Category *@
+                    <section class="row container ps-5">
+                        <section class="rounded-4" style="background:#A8B3FD;">
+                            <section class="row">
+                                <section class="row position-absolute" style="z-index:1">
+                                </section>
+                                    
+                            </section>
+                        </section>
+                    </section>
+                    </a>
+                    @* Trainings *@
+                    <section class="row">
+                        
+                    </section>
+                </section>
+            </section>
         </section>
     </section>
 </div>  

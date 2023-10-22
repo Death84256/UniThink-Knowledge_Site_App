@@ -37,30 +37,30 @@
                 </section>
                 @* login form *@
                 <form method="post"action="/Account/Login" id="loginForm">
-                @* email or phone input *@
-                <label hidden class="form-label" for="form2Example11">@UserId</label>
-                <section class="pt-3">
-                    <input class="w-100 p-1" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
-                    <span asp-validation-for="UserId"></span>
-                </section>
-                @* password input *@
-                <section class="pt-4">
-                    <input class="w-100 p-1" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </section>
-                @* forgot password *@
-                <section class="d-flex justify-content-end">
-                    <a class="text-muted text-decoration-none" asp-controller="Account" asp-action="ForgotAccount">@ForgotPass</a>
-                </section>
-                @* Login button *@
-                <section class="text-center pt-5">
-                        <button class="p-2 w-100 btn mb-3 btnLogin text-white" type="submit" style="background: #1E7110 !important;">@Login</button>
-                </section>
-                 @* create new account*@
-                <section class="text-center pt-3 pb-3">
-                    <p class="mb-0 me-2 mr-1" hidden>@DontHaveAcc</p>
-                        <button asp-controller="Account" asp-action="Register" class="createNewBtn p-2 w-100 btn mb-3" type="submit" style="background:#97FE86 !important;">@CreateNew</button>
-                </section>
+                    @* email or phone input *@
+                    <label hidden class="form-label" for="form2Example11">@UserId</label>
+                    <section class="pt-3">
+                        <input class="w-100 p-1" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
+                        <span asp-validation-for="UserId"></span>
+                    </section>
+                    @* password input *@
+                    <section class="pt-4">
+                        <input class="w-100 p-1" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </section>
+                    @* forgot password *@
+                    <section class="d-flex justify-content-end">
+                        <a class="text-muted text-decoration-none" asp-controller="Account" asp-action="ForgotAccount">@ForgotPass</a>
+                    </section>
+                    @* Login button *@
+                    <section class="text-center pt-5">
+                            <button class="p-2 w-100 btn mb-3 btnLogin text-white" type="submit" style="background: #1E7110 !important;">@Login</button>
+                    </section>
+                     @* create new account*@
+                    <section class="text-center pt-3 pb-3">
+                        <p class="mb-0 me-2 mr-1" hidden>@DontHaveAcc</p>
+                            <button asp-controller="Account" asp-action="Register" class="createNewBtn p-2 w-100 btn mb-3" type="submit" style="background:#97FE86 !important;">@CreateNew</button>
+                    </section>
                 </form>
             </section>
         </section>
