@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "User Master Screen";
+}
+<div class="min-vh-100" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
+    <div class="p-5">
+        <section class="row d-flex">
+            <section class="col d-flex justify-content-start">
+                <img class="" src="~/img/123.svg" />
+            </section>
+            <section class="col d-flex justify-content-end align-items-center h-25 w-25 pt-5">
+                <img class="d-flex align-items-center" src="~/img/profileCircleBlack.svg" />
+            </section>
+        </section>
+        @* content *@
+        <div class="container border" style="background: #F5F5F5;">
+            <section class="p-3">
+                @* arrow *@
+                <section class="row d-flex align-items-center">
+                    <section class="col-1 d-flex justify-content-start align-items-center">
+                        <a class="text-dark" asp-controller="Home" asp-action="Index"><i class="fs-3 fa fa-arrow-left"></i></a>
+                    </section>
+                    <section class="col d-flex justify-content-start">
+                        <section class="d-flex align-items-center">
+                            <h3 class="fw-normal d-flex">User Master</h3>
+                        </section>
+                    </section>
+                    <section class="col-6 d-flex justify-content-end">
+                        <!-- Search bar with icon on the left -->
+                        <div class="row d-flex align-items-center search-container-dwieght border rounded-0">
+                            <section class="col">
+                                <input class="border-0 p-2 search-input-dwieght" type="text" placeholder="Search">
+                            </section>
+                            <section class="col">
+                                <div class="search-icon-dwieght d-flex align-items-center">
+                                    <i class="fs-3 fa fa-search"></i>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                 @* add button *@
+                    <section class="col d-flex justify-content-end align-items-center">
+                        <input onclick="openModal()" class="p-2 rounded-2 border btn btn-success w-75" type="button" name="btnAdd" value="add" />
+                    </section>
+                </section>
+                 @* start row content *@
+                <section class="pt-3">
+                    <section class="border border-dark p-3">
+                         @* abang *@
+                        <section class="border border-secondary rounded-2 p-3">
+                            @* profile & lastname, First Name Middle Name & Action*@
+                            <section class="row border-dark rounded-2">
+                                <section class="col-2">
+                                    <img src="~/img/EllipseGold.svg" alt="">
+                                </section>
+                                <section class="col d-flex justify-content-start align-items-center">
+                                    <h5 class="d-flex align-items-center">Abang, Neco John B.</h5>
+                                </section>
+                                <section class="col-2 justify-content-end d-flex align-items-center">
+                                    <section class="d-flex align-items-center">
+                                        <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
+                                        <span class="d-flex px-4"></span>
+                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                        @* sebial *@
+                        <section class="pt-3">
+                            <section class="border border-secondary rounded-2 p-3">
+                                @* profile & lastname, First Name Middle Name & Action*@
+                                <section class="row border-dark rounded-2">
+                                    <section class="col-2">
+                                        <img src="~/img/ellipseBlue.svg" alt="">
+                                    </section>
+                                    <section class="col d-flex justify-content-start align-items-center">
+                                        <h5 class="d-flex align-items-center">Sebial, Evanglemir</h5>
+                                    </section>
+                                    <section class="col-2 justify-content-end d-flex align-items-center">
+                                        <section class="d-flex align-items-center">
+                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
+                                            <span class="d-flex px-4"></span>
+                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>  
+                        </section>
+                        @* dwieght *@
+                         <section class="pt-3">
+                            <section class="border border-secondary rounded-2 p-3">
+                                @* profile & lastname, First Name Middle Name & Action*@
+                                <section class="row border-dark rounded-2">
+                                    <section class="col-2">
+                                        <img src="~/img/ellipseRed.svg" alt="">
+                                    </section>
+                                    <section class="col d-flex justify-content-start align-items-center">
+                                        <h5 class="d-flex align-items-center">Fuentes, Dwieght Dewey E.</h5>
+                                    </section>
+                                    <section class="col-2 justify-content-end d-flex align-items-center">
+                                        <section class="d-flex align-items-center">
+                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
+                                            <span class="d-flex px-4"></span>
+                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>  
+                        </section>
+                         @* Caballero *@
+                         <section class="pt-3">
+                            <section class="border border-secondary rounded-2 p-3">
+                                @* profile & lastname, First Name Middle Name & Action*@
+                                <section class="row border-dark rounded-2">
+                                    <section class="col-2">
+                                        <img src="~/img/ellipseGreen.svg" alt="">
+                                    </section>
+                                    <section class="col d-flex justify-content-start align-items-center">
+                                        <h5 class="d-flex align-items-center">Caballero, Anton Rodrigo</h5>
+                                    </section>
+                                    <section class="col-2 justify-content-end d-flex align-items-center">
+                                        <section class="d-flex align-items-center">
+                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
+                                            <span class="d-flex px-4"></span>
+                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>  
+                        </section>
+                         @* Zarco *@
+                         <section class="pt-3">
+                            <section class="border border-secondary rounded-2 p-3">
+                                @* profile & lastname, First Name Middle Name & Action*@
+                                <section class="row border-dark rounded-2">
+                                    <section class="col-2">
+                                        <img src="~/img/ellipseYellow.svg" alt="">
+                                    </section>
+                                    <section class="col d-flex justify-content-start align-items-center">
+                                        <h5 class="d-flex align-items-center">Zarco, Louise Juaquine</h5>
+                                    </section>
+                                    <section class="col-2 justify-content-end d-flex align-items-center">
+                                        <section class="d-flex align-items-center">
+                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
+                                            <span class="d-flex px-4"></span>
+                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>  
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+</div>
