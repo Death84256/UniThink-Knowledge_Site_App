@@ -40,14 +40,14 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         /// <param name="tokenValidationParametersFactory">The token validation parameters factory.</param>
         /// <param name="tokenProviderOptionsFactory">The token provider options factory.</param>
         public AccountController(
-                            SignInManager signInManager,
-                            IHttpContextAccessor httpContextAccessor,
-                            ILoggerFactory loggerFactory,
-                            IConfiguration configuration,
-                            IMapper mapper,
-                            IUserService userService,
-                            TokenValidationParametersFactory tokenValidationParametersFactory,
-                            TokenProviderOptionsFactory tokenProviderOptionsFactory) : base(httpContextAccessor, loggerFactory, configuration, mapper)
+            SignInManager signInManager,
+            IHttpContextAccessor httpContextAccessor,
+            ILoggerFactory loggerFactory,
+            IConfiguration configuration,
+            IMapper mapper,
+            IUserService userService,
+            TokenValidationParametersFactory tokenValidationParametersFactory,
+            TokenProviderOptionsFactory tokenProviderOptionsFactory) : base(httpContextAccessor, loggerFactory, configuration, mapper)
         {
             this._sessionManager = new SessionManager(this._session);
             this._signInManager = signInManager;
@@ -165,6 +165,10 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         public IActionResult ResetPassword(ResetPasswordViewModel model) 
         {
             return View(model);
+        }
+        public IActionResult UserMasterAdmin()
+        {
+            return View("UsermasterAdmin");
         }
     }
 }
