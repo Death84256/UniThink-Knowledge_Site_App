@@ -170,5 +170,13 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         {
             return View("UsermasterAdmin");
         }
+        public IActionResult TrainingCategory()
+        {
+            return View("TrainingCategory");
+        }
+        public IActionResult AdminTrainingCategory()
+        {
+            return View("AdminTrainingCategory");
+        }
     }
 }
