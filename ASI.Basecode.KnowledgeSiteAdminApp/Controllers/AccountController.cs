@@ -178,5 +178,9 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         {
             return View("AdminTrainingCategory");
         }
+        public IActionResult AddModalUser()
+        {
+            return View("AddModalUser");
+        }
     }
 }
