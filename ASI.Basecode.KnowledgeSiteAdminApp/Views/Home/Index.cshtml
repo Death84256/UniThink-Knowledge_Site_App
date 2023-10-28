@@ -3,7 +3,7 @@
 }
 <div class="min-vh-100" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
     <section class="pb-5">
-       <section class="container p-5">
+       <section class="container">
            @* First Row *@
             <section class="row d-flex">
                 <section class="col d-flex">
@@ -20,7 +20,7 @@
             @* Dashboard Body Content *@
             <section class="container bg-white p-4 d-flex">
                 @* First Column / User Master *@
-                <section class="col-5">
+                <section class="col">
                     <a asp-action="UserMasterAdmin" asp-controller="Account" style="text-decoration:none;color:#000;">
                         <img src="~/img/userMaster.svg" alt="" class="img-fluid">
                     </a>
@@ -28,17 +28,8 @@
                 @* Second Column / Training Category and Training *@
                 <section class="col">
                     <a asp-action="AdminTrainingCategory" asp-controller="Account"style="text-decoration:none;" class="text-dark">
-                        @* Training Category *@
-                        <section class="row">
-                            <img src="~/img/trainingCategoryImg.svg" alt="" class="img-fluid">
-                        </section>
+                        <img src="~/img/AdminTrainingCategory.svg" alt="" class="img-fluid">
                     </a>
-                    @* Trainings *@
-                    <section class="row">
-                        <a href="#" style="text-decoration:none;">
-                            <img src="~/img/trainingsImg.svg" alt="" class="img-fluid">
-                        </a>
-                    </section>
                 </section>
             </section>
         </section>

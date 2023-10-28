@@ -5,10 +5,10 @@
     <div class="container pb-5">
         <section class="row d-flex">
             <section class="col d-flex justify-content-start">
-                <img src="~/img/123.svg" class="img-fluid d-flex justify-content-bottom pt-5" style="height: 177px;"/>
+                <img src="~/img/123.svg" class="img-fluid d-flex justify-content-bottom pt-5" style="height: 177px;" />
             </section>
             <section class="col d-flex justify-content-end align-items-center">
-                <img class="d-flex align-items-center" src="~/img/profileCircleBlack.svg"/>
+                <img class="d-flex align-items-center" src="~/img/profileCircleBlack.svg" />
             </section>
         </section>
         @* content *@
@@ -39,44 +39,27 @@
                     </section>
                     @* add button *@
                     <section class="col-2 d-flex justify-content-end align-items-center">
-                        <input onclick="openModal()" class="p-2 rounded-2 border btn btn-success w-75" type="button" name="btnAdd" value="add" />
+                        <a asp-action="ModalAddTraining" asp-controller="Account" class="p-2 rounded-2 border btn btn-success w-75" type="button" name="btnAdd" value="add">Add</a>
                     </section>
                 </section>
                 @* start row content *@
                 <section class="pt-3">
                     <section class="border border-dark p-5 d-flex">
                         <section class="col">
-                            <section class="rounded-2 p-2 pb-0"style="background: rgba(254, 134, 142, 0.68);">
-                                <a asp-action="ViewListofTraining" asp-controller="Account" class="text-decoration-none text-dark">
+                            <h5 class="text-center">Programming Language</h5>
+                            <section class="rounded-2 p-2 pb-0" style="background: rgba(254, 134, 142, 0.68);">
+                                <a asp-action="#" asp-controller="Account" class="text-decoration-none text-dark">
                                     <section class="row d-flex align-items-center">
                                         <section class="d-flex justify-content-center align-items-center">
-                                            <img src="~/img/programmingLanguageimg.svg" class="img-fluid" style="width: 453px; height: 277px;"/>
+                                            <img src="~/img/programmingLanguageimg.svg" class="img-fluid" style="width: 453px; height: 277px;" />
                                         </section>
                                     </section>
-                                    <section class="row bottom-0 rounded-4 bg-white border d-flex"style="border: 1px solid #BE001E !important;">
+                                    <section class="row bottom-0 rounded-4 bg-white border d-flex" style="border: 1px solid #BE001E !important;">
                                         <section class="d-flex align-items-center justify-content-center p-3">
-                                            <h4>Programming Languages</h4>
+                                            <h4>Python</h4>
                                         </section>
                                     </section>
-                                    </a>
-                            </section>
-                        </section>
-                        <span class="px-4"></span>
-                        @* 2nd col content *@
-                        <section class="col">
-                            <section class="rounded-2 p-2 pb-0"style="background: rgba(151, 254, 134, 0.68);">
-                                <a href="#" class="text-decoration-none text-dark">
-                                    <section class="row d-flex align-items-center">
-                                        <section class="d-flex justify-content-center align-items-center">
-                                            <img src="~/img/cloudTechnology.svg" class="img-fluid" style="width: 453px; height: 277px;"/>
-                                        </section>
-                                    </section>
-                                    <section class="row bottom-0 rounded-4 bg-white border d-flex"style="border: 1px solid #1E7110 !important;">
-                                        <section class="d-flex align-items-center justify-content-center p-3">
-                                            <h4>Cloud Technology</h4>
-                                        </section>
-                                    </section>
-                                    </a>
+                                </a>
                             </section>
                         </section>
                     </section>
