@@ -36,5 +36,15 @@ namespace ASI.Basecode.KnowledgeSiteApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Trainings() { 
+            return View("Trainings");
+        }
+
+        public IActionResult Topics()
+        {
+            return View("Topics");
+        }
+
     }
 }
