@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Add User";
 }
-<div class="min-vh-100" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
-    <div class="p-5">
+<div style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
+    <div class="p-4">
         @* content *@
-        <div class="container border mt-5" style="background: #F5F5F5;">
+        <div class="container border" style="background: #F5F5F5;">
             <section class="p-3">
                 @* arrow *@
                 <section class="row container d-flex align-items-center">
@@ -18,7 +18,7 @@
                             </a>
                         </section>
                     </section>
-                   <span class="ps-3"><hr/></span>
+                   <span class="ps-3"><hr></span>
                     <section class="col-10 d-flex justify-content-start">
                         <!-- Search bar with icon on the left -->
                         <div class="row ms-1 d-flex align-items-center search-container-dwieght border rounded-2 w-100">
@@ -27,141 +27,183 @@
                     </section>
                     @* add button *@
                     <section class="col-2 d-flex justify-content-center">
-                        <a asp-action="AddModalUser" asp-controller="Account" class="p-2 rounded-2 border btn btn-success w-100" type="button" name="btnAdd" value="add">Invite</a>
+                        <a asp-action="AddModalUser" asp-controller="Account" class="p-2 rounded-2 border w-100 text-center text-dark" style="background: rgba(88, 202, 69, 0.76); text-decoration: none;" type="button" name="btnAdd" value="add">Invite</a>
                     </section>
-                    <span class="mt-5 ps-3"><hr /></span>
+                    <span class="mt-3 ps-3"><hr /></span>
                 </section>
                 
                 @* start row content *@
-                <section class="pt-3" style="overflow-y: scroll; max-height: 400px">
-                    <section class=" p-3">
-                        @* abang *@
-                        <section class="border border-secondary rounded-2 p-3">
+                <section class="border border-dark p-3 rounded-2" style="max-height: 400px; overflow-y: scroll;">
+                    @* abang *@
+                    <section class="border border-secondary rounded-2 p-2 px-3">
+                        @* profile & lastname, First Name Middle Name & Action*@
+                        <section class="row border-dark rounded-2">
+                            <section class="col-2">
+                                <img src="~/img/EllipseGold.svg" alt="" class="w-25">
+                            </section>
+                            <section class="col d-flex justify-content-start align-items-center">
+                                <h6 class="d-flex align-items-center">Abang, Neco John B.</h6>
+                            </section>
+                            <section class="col-2 justify-content-end d-flex align-items-center">
+                                <section class="d-flex align-items-center">
+                                    <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                    <span class="d-flex px-2"></span>
+                                    <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                    @* sebial *@
+                    <section class="pt-3">
+                        <section class="border border-secondary rounded-2 p-2 px-3">
                             @* profile & lastname, First Name Middle Name & Action*@
                             <section class="row border-dark rounded-2">
                                 <section class="col-2">
-                                    <img src="~/img/EllipseGold.svg" alt="">
+                                    <img src="~/img/ellipseBlue.svg" alt="" class="w-25">
                                 </section>
                                 <section class="col d-flex justify-content-start align-items-center">
-                                    <h5 class="d-flex align-items-center">Abang, Neco John B.</h5>
+                                    <h6 class="d-flex align-items-center">Sebial, Evanglemir</h6>
                                 </section>
                                 <section class="col-2 justify-content-end d-flex align-items-center">
                                     <section class="d-flex align-items-center">
-                                        <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                        <span class="d-flex px-4"></span>
-                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                        <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                        <span class="d-flex px-2"></span>
+                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                     </section>
                                 </section>
                             </section>
                         </section>
-                        @* sebial *@
-                        <section class="pt-3">
-                            <section class="border border-secondary rounded-2 p-3">
-                                @* profile & lastname, First Name Middle Name & Action*@
-                                <section class="row border-dark rounded-2">
-                                    <section class="col-2">
-                                        <img src="~/img/ellipseBlue.svg" alt="">
-                                    </section>
-                                    <section class="col d-flex justify-content-start align-items-center">
-                                        <h5 class="d-flex align-items-center">Sebial, Evanglemir</h5>
-                                    </section>
-                                    <section class="col-2 justify-content-end d-flex align-items-center">
-                                        <section class="d-flex align-items-center">
-                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                            <span class="d-flex px-4"></span>
-                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
-                                        </section>
+                    </section>
+                    @* dwieght *@
+                    <section class="pt-3">
+                        <section class="border border-secondary rounded-2 p-2 px-3">
+                            @* profile & lastname, First Name Middle Name & Action*@
+                            <section class="row border-dark rounded-2">
+                                <section class="col-2">
+                                    <img src="~/img/ellipseRed.svg" alt="" class="w-25">
+                                </section>
+                                <section class="col d-flex justify-content-start align-items-center">
+                                    <h6 class="d-flex align-items-center">Fuentes, Dwieght Dewey E.</h6>
+                                </section>
+                                <section class="col-2 justify-content-end d-flex align-items-center">
+                                    <section class="d-flex align-items-center">
+                                        <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                        <span class="d-flex px-2"></span>
+                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                     </section>
                                 </section>
                             </section>
                         </section>
-                        @* dwieght *@
-                        <section class="pt-3">
-                            <section class="border border-secondary rounded-2 p-3">
-                                @* profile & lastname, First Name Middle Name & Action*@
-                                <section class="row border-dark rounded-2">
-                                    <section class="col-2">
-                                        <img src="~/img/ellipseRed.svg" alt="">
-                                    </section>
-                                    <section class="col d-flex justify-content-start align-items-center">
-                                        <h5 class="d-flex align-items-center">Fuentes, Dwieght Dewey E.</h5>
-                                    </section>
-                                    <section class="col-2 justify-content-end d-flex align-items-center">
-                                        <section class="d-flex align-items-center">
-                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                            <span class="d-flex px-4"></span>
-                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
-                                        </section>
+                    </section>
+                    @* Caballero *@
+                    <section class="pt-3">
+                        <section class="border border-secondary rounded-2 p-2 px-3">
+                            @* profile & lastname, First Name Middle Name & Action*@
+                            <section class="row border-dark rounded-2">
+                                <section class="col-2">
+                                    <img src="~/img/ellipseGreen.svg" alt="" class="w-25">
+                                </section>
+                                <section class="col d-flex justify-content-start align-items-center">
+                                    <h6 class="d-flex align-items-center">Caballero, Anton Rodrigo</h6>
+                                </section>
+                                <section class="col-2 justify-content-end d-flex align-items-center">
+                                    <section class="d-flex align-items-center">
+                                        <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                        <span class="d-flex px-2"></span>
+                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                     </section>
                                 </section>
                             </section>
                         </section>
-                        @* Caballero *@
-                        <section class="pt-3">
-                            <section class="border border-secondary rounded-2 p-3">
-                                @* profile & lastname, First Name Middle Name & Action*@
-                                <section class="row border-dark rounded-2">
-                                    <section class="col-2">
-                                        <img src="~/img/ellipseGreen.svg" alt="">
-                                    </section>
-                                    <section class="col d-flex justify-content-start align-items-center">
-                                        <h5 class="d-flex align-items-center">Caballero, Anton Rodrigo</h5>
-                                    </section>
-                                    <section class="col-2 justify-content-end d-flex align-items-center">
-                                        <section class="d-flex align-items-center">
-                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                            <span class="d-flex px-4"></span>
-                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
-                                        </section>
+                    </section>
+                    @* Zarco *@
+                    <section class="pt-3">
+                        <section class="border border-secondary rounded-2 p-2 px-3">
+                            @* profile & lastname, First Name Middle Name & Action*@
+                            <section class="row border-dark rounded-2">
+                                <section class="col-2">
+                                    <img src="~/img/ellipseYellow.svg" alt="" class="w-25">
+                                </section>
+                                <section class="col d-flex justify-content-start align-items-center">
+                                    <h6 class="d-flex align-items-center">Zarco, Louise Juaquine</h6>
+                                </section>
+                                <section class="col-2 justify-content-end d-flex align-items-center">
+                                    <section class="d-flex align-items-center">
+                                        <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                        <span class="d-flex px-2"></span>
+                                        <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                     </section>
                                 </section>
                             </section>
                         </section>
                         @* Zarco *@
                         <section class="pt-3">
-                            <section class="border border-secondary rounded-2 p-3">
+                            <section class="border border-secondary rounded-2 p-2 px-3">
                                 @* profile & lastname, First Name Middle Name & Action*@
                                 <section class="row border-dark rounded-2">
                                     <section class="col-2">
-                                        <img src="~/img/ellipseYellow.svg" alt="">
+                                        <img src="~/img/ellipseYellow.svg" alt="" class="w-25">
                                     </section>
                                     <section class="col d-flex justify-content-start align-items-center">
-                                        <h5 class="d-flex align-items-center">Zarco, Louise Juaquine</h5>
+                                        <h6 class="d-flex align-items-center">Zarco, Louise Juaquine</h6>
                                     </section>
                                     <section class="col-2 justify-content-end d-flex align-items-center">
                                         <section class="d-flex align-items-center">
-                                            <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                            <span class="d-flex px-4"></span>
-                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                            <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                            <span class="d-flex px-2"></span>
+                                            <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                         </section>
                                     </section>
                                 </section>
                             </section>
+                            @* Zarco *@
                             <section class="pt-3">
-                                <section class="border border-secondary rounded-2 p-3">
+                                <section class="border border-secondary rounded-2 p-2 px-3">
                                     @* profile & lastname, First Name Middle Name & Action*@
                                     <section class="row border-dark rounded-2">
                                         <section class="col-2">
-                                            <img src="~/img/ellipseYellow.svg" alt="">
+                                            <img src="~/img/ellipseYellow.svg" alt="" class="w-25">
                                         </section>
                                         <section class="col d-flex justify-content-start align-items-center">
-                                            <h5 class="d-flex align-items-center">Zarco, Louise Juaquine</h5>
+                                            <h6 class="d-flex align-items-center">Zarco, Louise Juaquine</h6>
                                         </section>
                                         <section class="col-2 justify-content-end d-flex align-items-center">
                                             <section class="d-flex align-items-center">
-                                                <a href="#" class="text-decoration-none text-dark "><i class="text-dark fs-3 fa fa-pen"></i></a>
-                                                <span class="d-flex px-4"></span>
-                                                <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-3 fa fa-trash"></i></a>
+                                                <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                                <span class="d-flex px-2"></span>
+                                                <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
                                             </section>
                                         </section>
                                     </section>
                                 </section>
+                                @* Zarco *@
+                                <section class="pt-3">
+                                    <section class="border border-secondary rounded-2 p-2 px-3">
+                                        @* profile & lastname, First Name Middle Name & Action*@
+                                        <section class="row border-dark rounded-2">
+                                            <section class="col-2">
+                                                <img src="~/img/ellipseYellow.svg" alt="" class="w-25">
+                                            </section>
+                                            <section class="col d-flex justify-content-start align-items-center">
+                                                <h6 class="d-flex align-items-center">Zarco, Louise Juaquine</h6>
+                                            </section>
+                                            <section class="col-2 justify-content-end d-flex align-items-center">
+                                                <section class="d-flex align-items-center">
+                                                    <a href="#" class="text-decoration-none text-dark"><i class="text-dark fs-6 fa fa-pen"></i></a>
+                                                    <span class="d-flex px-2"></span>
+                                                    <a href="#" class="text-decoration-none text-danger"><i class="text-danger fs-6 fa fa-trash"></i></a>
+                                                </section>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
                         </section>
                     </section>
                 </section>
             </section>
                 @* Save button *@
-                <section class="col pt-4 d-flex justify-content-end">
+                <section class="col p-4 d-flex justify-content-end">
                     <a asp-action="AddModalUser" asp-controller="Account" class="p-2 px-5 rounded-2 border btn btn-success" type="button" name="btnAdd" value="add">Save</a>
                 </section>
         </div>

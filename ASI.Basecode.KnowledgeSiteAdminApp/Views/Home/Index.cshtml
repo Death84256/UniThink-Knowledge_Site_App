@@ -1,41 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Admin Screen Dashboard";
 }
-<div class="min-vh-100" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 12.82%, rgba(88, 202, 69, 0.76) 100%);">
+<body class="container" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
 
-    <section class="pb-5">
-
-    <section class="pb-2">
-
-       <section class="container">
-           @* First Row *@
-            <section class="row d-flex">
-                <section class="col d-flex">
-                    <section class=" d-flex justfiy-content-start align-items-center">
-                        <img class="me-0" width="150" height="150" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
-                    </section>
-                </section>
-                <section class="col d-flex justify-content-end">
-                    <section class="d-flex justify-content-end align-items-center">
-                        <img class="me-0" width="60" height="60" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
-                    </section>
-                </section>
+    @* First Row *@
+    <section class="row d-flex">
+        <section class="col d-flex">
+            <section class=" d-flex justfiy-content-start align-items-center">
+                <img class="me-0" width="130" height="130" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
             </section>
-            @* Dashboard Body Content *@
-            <section class="container bg-white p-2 d-flex">
-                @* First Column / User Master *@
-                <section class="col">
-                    <a asp-action="UserMasterAdmin" asp-controller="Account" style="text-decoration:none;color:#000;">
-                        <img src="~/img/userMaster.svg" alt="" class="img-fluid">
-                    </a>
-                </section>
-                @* Second Column / Training Category and Training *@
-                <section class="col">
-                    <a asp-action="AdminTrainingCategory" asp-controller="Account"style="text-decoration:none;" class="text-dark">
-                        <img src="~/img/AdminTrainingCategory.svg" alt="" class="img-fluid">
-                    </a>
-                </section>
+        </section>
+        <section class="col d-flex justify-content-end">
+            <section class="d-flex justify-content-end align-items-center">
+                <img class="me-0" width="50" height="50" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
             </section>
         </section>
     </section>
-</div>  
+    @* Content *@
+        <section class="container rounded-5 p-4 d-flex justify-content-around bg-light" style="height: 550px; width: 900px">
+            <section class="col-6 d-flex justify-content-center">
+                @* First Column / User Master *@
+                <a asp-action="UserMasterAdmin" asp-controller="Account">
+                    <img src="~/img/userMaster.svg" alt="" style="width: 400px;">
+                </a>
+            </section>
+            <section class="col-6 d-flex justify-content-center">
+                @* Second Column / Training Category and Training *@
+                <a asp-action="AdminTrainingCategory" asp-controller="Account">
+                    <img src="~/img/AdminTrainingCategory.svg" alt="" style="width: 400px;">
+                </a>
+            </section>
+        </section>
+</body>  
