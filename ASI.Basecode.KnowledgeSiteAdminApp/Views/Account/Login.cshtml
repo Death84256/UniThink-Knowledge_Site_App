@@ -11,41 +11,43 @@
 <div>
     @Html.AntiForgeryToken()
 </div>
-<div class="loginContainer p-5">
-    <section class="d-flex">
+<div class="loginContainer d-flex justify-content-center align-items-center min-vh-100 px-5">
+    <section class="d-flex justify-content-around">
         @* First Column Description *@
-        <section class="col-7 p-2">
+        <section class="col-6 p-5 d-flex justify-content-center align-items-center">
             <section class="row">
-                <h1 class="fw-bold pt-5 d-flex justify-content-start">Welcome</h1>
+                <h1 class="fw-bold d-flex justify-content-start">Welcome</h1>
                 <section class="d-flex pt-3">
-                    <p class="pe-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="pe-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        pe-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                    </p>
                 </section>
             </section>
            
         </section>
         @* login Section Column *@
-        <section class="loginCol col">
-            <section class="container p-4">
+        <section class="loginCol col-5">
+            <section class="container p-5 pt-0">
                 <section class="row">
-                    <section class="col-5"></section>
-                    <section class="col">
+                    <section class="col-12">
                         <img class="me-0" width="150" height="150" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
                     </section>
                 </section>
                 <section class="row d-flex justify-content-start">
-                    <h2 class="fw-normal">Login</h2>
+                    <h2>Login</h2>
                 </section>
                 @* login form *@
                 <form method="post"action="/Account/Login" id="loginForm">
                     @* email or phone input *@
                     <label hidden class="form-label" for="form2Example11">@UserId</label>
                     <section class="pt-3">
-                        <input class="w-100 p-1" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
+                        <input class="w-100 p-2 rounded-2" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
                         <span asp-validation-for="UserId"></span>
                     </section>
                     @* password input *@
                     <section class="pt-4">
-                        <input class="w-100 p-1" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
+                        <input class="w-100 p-2 rounded-2" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </section>
                     @* forgot password *@
@@ -54,12 +56,7 @@
                     </section>
                     @* Login button *@
                     <section class="text-center pt-5">
-                            <button class="p-2 w-100 btn mb-3 btnLogin text-white" type="submit" style="background: #1E7110 !important;">@Login</button>
-                    </section>
-                     @* create new account*@
-                    <section class="text-center pt-3 pb-3">
-                        <p class="mb-0 me-2 mr-1" hidden>@DontHaveAcc</p>
-                            <button asp-controller="Account" asp-action="Register" class="createNewBtn p-2 w-100 btn mb-3" type="submit" style="background:#97FE86 !important;">@CreateNew</button>
+                        <button class="p-2 w-100 btn mb-3 btnLogin text-light" type="submit" style="border:2px solid #ffff; background: #1E7110 !important;">@Login</button>
                     </section>
                 </form>
             </section>
