@@ -23,8 +23,7 @@
 
                     </p>
                 </section>
-            </section>
-           
+            </section> 
         </section>
         @* login Section Column *@
         <section class="loginCol col-5">
@@ -42,12 +41,12 @@
                     @* email or phone input *@
                     <label hidden class="form-label" for="form2Example11">@UserId</label>
                     <section class="pt-3">
-                        <input class="w-100 p-2 rounded-2" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
+                        <input class="w-100 p-2 rounded-2 border-1" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
                         <span asp-validation-for="UserId"></span>
                     </section>
                     @* password input *@
                     <section class="pt-4">
-                        <input class="w-100 p-2 rounded-2" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
+                        <input class="w-100 p-2 rounded-2 border-1" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </section>
                     @* forgot password *@
