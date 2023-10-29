@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Admin Screen Dashboard";
 }
-<body class="container" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
+<body class="container-fluid" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
 
-    @* First Row *@
-    <section class="row d-flex">
+    @* Header *@
+    <section class="row d-flex bg-light px-4 mb-5">
         <section class="col d-flex">
             <section class=" d-flex justfiy-content-start align-items-center">
-                <img class="me-0" width="130" height="130" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
+                <img class="m-2" width="70" height="60" src="~/img/Unilogo.png" alt=""/><span class="fs-2 pt-4">Unithink</span>
             </section>
         </section>
         <section class="col d-flex justify-content-end">
@@ -27,7 +27,7 @@
             <section class="col-6 d-flex justify-content-center">
                 @* Second Column / Training Category and Training *@
                 <a asp-action="AdminTrainingCategory" asp-controller="Account">
-                    <img src="~/img/AdminTrainingCategory.svg" alt="" style="width: 400px;">
+                    <img src="~/img/AdminTrainingCategory.png" alt="" style="width: 400px;">
                 </a>
             </section>
         </section>

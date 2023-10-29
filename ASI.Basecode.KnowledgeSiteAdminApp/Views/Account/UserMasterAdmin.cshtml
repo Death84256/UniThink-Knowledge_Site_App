@@ -1,12 +1,12 @@
 ﻿@{
     ViewData["Title"] = "User Master Screen";
 }
-<body class="container" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
-    @* First Row *@
-    <section class="row d-flex">
+<body class="container-fluid" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
+    @* Header *@
+    <section class="row d-flex bg-light px-4 mb-5">
         <section class="col d-flex">
             <section class=" d-flex justfiy-content-start align-items-center">
-                <img class="me-0" width="130" height="130" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
+                <img class="m-2" width="70" height="60" src="~/img/Unilogo.png" alt="" /><span class="fs-2 pt-4">Unithink</span>
             </section>
         </section>
         <section class="col d-flex justify-content-end">
@@ -21,7 +21,7 @@
             @* arrow *@
             <section class="row d-flex align-items-center">
                 <section class="col-1 d-flex justify-content-start">
-                    <a class="text-dark" asp-controller="Home" asp-action="Index"><i class="fs-3 fa fa-arrow-left fs-6"></i></a>
+                    <a class="text-dark" asp-controller="Home" asp-action="Index"><i class="fs-6 fa fa-arrow-left"></i></a>
                 </section>
                 <section class="col-5 d-flex justify-content-start">
                     <h5 class="fw-normal d-flex">User Master</h5>

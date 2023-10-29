@@ -186,11 +186,14 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         public IActionResult ModalAddTraining()
         {
             return View("ModalAddTraining");
-        }
-    }   
+        }   
         public IActionResult AddModalUser()
         {
             return View("AddModalUser");
+        }
+        public IActionResult ListOfTopics()
+        {
+            return View("ListOfTopics");
         }
     }
 }
