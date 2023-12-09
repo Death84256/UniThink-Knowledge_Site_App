@@ -6,24 +6,48 @@ using ASI.Basecode.Data.Models;
 
 namespace ASI.Basecode.Data
 {
-    public partial class AsiBasecodeDBContext : DbContext
+    public partial class UniThinkContext : DbContext
     {
-        public AsiBasecodeDBContext()
+        public UniThinkContext()
         {
         }
 
-        public AsiBasecodeDBContext(DbContextOptions<AsiBasecodeDBContext> options)
+        public UniThinkContext(DbContextOptions<UniThinkContext> options)
             : base(options)
         {
         }
 
+        public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<User> Users { get; set; }
+
+       
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Book>(entity =>
+            {
+                entity.Property(e => e.Author)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.CreatedBy)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Description).IsRequired();
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.UpdatedBy)
+                    .IsRequired()
+                    .HasMaxLength(50);
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.UserId, "UQ__Users__1788CC4D5F4A160F")
-                    .IsUnique();
+                entity.Property(e => e.Code).HasMaxLength(50);
 
                 entity.Property(e => e.CreatedBy)
                     .IsRequired()
@@ -32,15 +56,17 @@ namespace ASI.Basecode.Data
 
                 entity.Property(e => e.CreatedTime).HasColumnType("datetime");
 
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Password)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.UpdatedBy)
                     .IsRequired()
@@ -51,8 +77,7 @@ namespace ASI.Basecode.Data
 
                 entity.Property(e => e.UserId)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

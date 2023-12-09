@@ -34,7 +34,9 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp
 
             // Services
             this._services.TryAddSingleton<TokenValidationParametersFactory>();
+            this._services.AddScoped<IForgotPass, ForgotPass>();
             this._services.AddScoped<IUserService, UserService>();
+             
           
 
             // Repositories

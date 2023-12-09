@@ -1,0 +1,65 @@
+﻿@model ASI.Basecode.Services.ServiceModels.UserViewModel
+
+@{
+    ViewData["Title"] = "Add User";
+}
+<body style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
+    @* First Row *@
+    <div class="bg-light px-5 pt-0" style="box-shadow: 47px 4px 50px -5px #000;">
+        <section class="row d-flex">
+            <section class="col d-flex">
+                <section class=" d-flex justfiy-content-start align-items-center">
+                    <img class="my-3" width="100" height="80" src="~/img/logo.png" alt="" />
+                    <span class="fs-1 pt-4 ms-2">UniThink</span>
+                </section>
+            </section>
+            <section class="col d-flex justify-content-end">
+                <section class="d-flex justify-content-end align-items-center">
+            <img class="me-0" width="60" height="60" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
+                </section>
+            </section>
+        </section>
+    </div>
+    <div>
+        <div class="container border rounded-2 mt-5" style="background: #F5F5F5; height:680px;">
+            <section class="row m-3 d-flex align-items-center">
+                <section class="col d-flex justify-content-start">
+                    <section class="col d-flex justify-content-start">
+                        <a class="text-dark" asp-controller="Home" asp-action="UserMasterAdmin"><i class="fs-4 fa fa-arrow-left fs-6"></i></a>
+                     <section class="col-9 ms-3 d-flex justify-content-start">
+                            <h5 class="fw-normal d-flex">User Master</h5>
+                        </section>
+                    </section>
+                </section>><hr class="mt-3">
+            </section>
+            <section class="d-flex justify-content-center align-items-center w-75" style="margin-left:160px;">
+                <form method="post" asp-action="UpdateModalUser">
+                    <input type="hidden" asp-for="Id" />
+                    <div>
+                        <label class="fs-4 mt-3" for="UserId">User ID:</label><br />
+                        <input type="text" class="p-3 border rounded" id="UserId" placeholder="Enter UserID" asp-for="UserId" style="width:800px;" />
+                    </div>
+                    <div>
+                        <label class="fs-4 mt-3" for="Name">Name:</label><br />
+                        <input type="text" class="p-3 border rounded" id="Name" placeholder="Enter Name" asp-for="Name" style="width:800px;" />
+                    </div>
+        
+                    <div>
+                        <label class="fs-4 mt-3" for="Email">Email:</label><br />
+                        <input type="email" class="p-3 border rounded" id="Email" placeholder="Enter Email" asp-for="Email" style="width:800px;" />
+                    </div>
+                    <div>
+                        <label class="fs-4 mt-3" for="Password">Password:</label><br />
+                        <input class="p-3 border rounded" id="Password" placeholder="Enter Password" asp-for="Password" style="width:800px;" />
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="fs-4 mt-5 px-5 rounded-2 border btn btn-success">
+                        Save
+                    </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+

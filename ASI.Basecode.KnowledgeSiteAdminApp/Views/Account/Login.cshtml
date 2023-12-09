@@ -42,21 +42,21 @@
                     @* email or phone input *@
                     <label hidden class="form-label" for="form2Example11">@UserId</label>
                     <section class="pt-3">
-                        <input class="w-100 p-2 rounded-2" type="text" id="form2Example11" asp-for="UserId" placeholder="Email or phone:">
+                        <input class="w-100 border p-3 rounded-2" type="text" id="form2Example11" asp-for="UserId" placeholder="UserID:">
                         <span asp-validation-for="UserId"></span>
                     </section>
                     @* password input *@
                     <section class="pt-4">
-                        <input class="w-100 p-2 rounded-2" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
+                        <input class="w-100 border p-3 rounded-2" type="password" id="form2Example22" asp-for="Password" placeholder="Password:">
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </section>
                     @* forgot password *@
                     <section class="d-flex justify-content-end">
-                        <a class="text-muted text-decoration-none" asp-controller="Account" asp-action="ForgotAccount">@ForgotPass</a>
+                        <a class="text-muted text-decoration-none pt-2" asp-controller="Account" asp-action="ForgotAccount">@ForgotPass</a>
                     </section>
                     @* Login button *@
                     <section class="text-center pt-5">
-                        <button class="p-2 w-100 btn mb-3 btnLogin text-light" type="submit" style="border:2px solid #ffff; background: #1E7110 !important;">@Login</button>
+                        <button class="p-3 w-100 fs-5 btn mb-3 btnLogin text-light" type="submit" style="border:2px solid #ffff; background: #1E7110 !important;">@Login</button>
                     </section>
                 </form>
             </section>

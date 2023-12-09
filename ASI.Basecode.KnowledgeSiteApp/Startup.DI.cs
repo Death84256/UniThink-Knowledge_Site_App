@@ -30,6 +30,7 @@ namespace ASI.Basecode.KnowledgeSiteApp
 
             // Services
             this._services.AddScoped<IUserService, UserService>();
+            this._services.AddScoped<IForgotPass, ForgotPass>();
           
 
             // Repositories

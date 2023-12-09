@@ -1,26 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Admin Screen Dashboard";
 }
-<body class="container" style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
+<body style="background: linear-gradient(238deg, rgba(30, 113, 16, 0.80) 15.81%, rgba(88, 202, 69, 0.76) 100%);">
 
-    @* First Row *@
-    <section class="row d-flex">
-        <section class="col d-flex">
-            <section class=" d-flex justfiy-content-start align-items-center">
-                <img class="me-0" width="130" height="130" src="~/img/Uni-Think-Logo.svg" alt="" style="margin-left: auto; display: block;" />
+    <div class="bg-light px-5 pt-0" style="box-shadow: 47px 4px 50px -5px #000;">
+        @* First Row *@
+        <section class="row d-flex">
+            <section class="col d-flex">
+                <section class=" d-flex justfiy-content-start align-items-center">
+                    <img class="my-3" width="100" height="80" src="~/img/logo.png" alt=""/>
+                    <span class="fs-1 pt-4 ms-2">UniThink</span>
+                </section>
+            </section>
+            <section class="col d-flex justify-content-end">
+                <section class="d-flex justify-content-end align-items-center">
+                    <img class="me-0" width="60" height="60" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
+                </section>
             </section>
         </section>
-        <section class="col d-flex justify-content-end">
-            <section class="d-flex justify-content-end align-items-center">
-                <img class="me-0" width="50" height="50" src="~/img/dashboardProfile.svg" alt="" style="margin-left: auto; display: block;" />
-            </section>
-        </section>
-    </section>
+    </div>
+    
     @* Content *@
-        <section class="container rounded-5 p-4 d-flex justify-content-around bg-light" style="height: 550px; width: 900px">
+        <section class="container rounded-5 p-4 mt-5 d-flex justify-content-around bg-light" style="height: 550px; width: 900px">
             <section class="col-6 d-flex justify-content-center">
                 @* First Column / User Master *@
-                <a asp-action="UserMasterAdmin" asp-controller="Account">
+                <a asp-action="UserMasterAdmin" asp-controller="Home">
                     <img src="~/img/userMaster.svg" alt="" style="width: 400px;">
                 </a>
             </section>

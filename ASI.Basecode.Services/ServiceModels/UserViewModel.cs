@@ -9,6 +9,7 @@ namespace ASI.Basecode.Services.ServiceModels
 {
     public class UserViewModel
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "Username is required.")]
         public string UserId { get; set; }
 
@@ -21,5 +22,12 @@ namespace ASI.Basecode.Services.ServiceModels
         [Required(ErrorMessage = "Confirmation Password is required.")]
         [Compare("Password", ErrorMessage = "Password and Confirmation Password must match.")]
         public string ConfirmPassword { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime UpdatedTime { get; set; }
+        [Required(ErrorMessage = "Email is fucking required.")]
+        public string Email { get; set; }
+        public string Code { get; set; }
     }
 }

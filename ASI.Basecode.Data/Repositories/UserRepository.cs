@@ -4,6 +4,7 @@ using Basecode.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace ASI.Basecode.Data.Repositories
         public IQueryable<User> GetUsers()
         {
             return this.GetDbSet<User>();
+            
         }
 
         public bool UserExists(string userId)
@@ -32,5 +34,22 @@ namespace ASI.Basecode.Data.Repositories
             UnitOfWork.SaveChanges();
         }
 
+        public void UpdateUser(User user)
+        {
+            this.GetDbSet<User>().Update(user);
+            UnitOfWork.SaveChanges();
+        }
+        
+        public User GetUser(int Id)
+        {
+            var data = this.GetDbSet<User>().Where(x => x.Id == Id).FirstOrDefault();
+            return data;
+        }
+        public void DeleteUser(User user)
+        {
+            this.GetDbSet<User>().Remove(user);
+            UnitOfWork.SaveChanges();
+        }
+ 
     }
 }

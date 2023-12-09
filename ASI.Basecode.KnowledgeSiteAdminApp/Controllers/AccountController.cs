@@ -140,35 +140,49 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         }
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult ForgotAccount(ForgotAccountViewModel model)
+        public IActionResult ForgotAccount(UserViewModel model)
         {
             return View();
         }
         /* account verification area */
         [HttpPost]
-        public IActionResult AccountVerification(AccountVerificationViewModel model)
+        [AllowAnonymous]
+        public IActionResult AccountVerification(UserViewModel model)
         {
-            return View("AccountVerification");
-/*            if (ModelState.IsValid)
+            string host = HttpContext.Request.Host.ToString();
+            if(_userService.CheckEmail(model, host))
             {
-                // Perform any account verification logic here
-                
+                return RedirectToAction("Login", "Account");
             }
             else
             {
-                // Display the form with validation errors
-                return View();  
-            }*/
+                TempData["ErrorMessage"] = "Email does not exists";
+                return RedirectToAction("ForgotAccount");
+            }
         }
-
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPassword(string email, string code)
+        {
+            bool isCodeExist = _userService.PasswordParameter(email, code);
+            if (isCodeExist)
+            {
+                ViewBag.Email = email;
+                ViewBag.Code = code;
+                return View();
+            }
+            return RedirectToAction("Login", "Account");
+        }
         [HttpPost]
-        public IActionResult ResetPassword(ResetPasswordViewModel model) 
+        [AllowAnonymous]
+        public IActionResult ResetPassword(UserViewModel model) 
         {
-            return View(model);
-        }
-        public IActionResult UserMasterAdmin()
-        {
-            return View("UsermasterAdmin");
+            bool ResetPass = _userService.PasswordReset(model);
+            if (ResetPass)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            return View();
         }
         public IActionResult TrainingCategory()
         {
@@ -187,10 +201,8 @@ namespace ASI.Basecode.KnowledgeSiteAdminApp.Controllers
         {
             return View("ModalAddTraining");
         }
+        
     }   
-        public IActionResult AddModalUser()
-        {
-            return View("AddModalUser");
-        }
+        
     }
 
